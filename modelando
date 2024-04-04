@@ -1,0 +1,46 @@
+Classe Conta:
+    atributos de classe privados:
+        _saldo: retorna um float
+        _numero: retorna um int
+        _agencia: retorna um str
+        _cliente: retorna um cliente
+        _historico: retorna um historico
+    
+    metodos:
+        saldo(): retorna um float
+        nova_conta(cliente: Cliente, numero: int): retorna um Conta
+        sacar(valor: float): retorna um bool
+        depositar(valor: float): retorna um bool
+
+Classe filha da Conta:
+    ContaCorrente(Conta):
+        atributos:
+            _limite: retorna um float
+            _limite_saques: retorna um int
+
+Classe Historico:
+    Metodo:
+        adicionar_transacao(transacao: Transacao)
+
+Classe Abstrata:
+    Trasacao:
+        Metodo:
+            registrar(conta: Conta)
+
+Classe Deposito:
+    atributo:
+        _valor: float
+
+Classe Saque:
+    atributo:
+        _valor: float
+
+Classe Cliente:
+    atributos:
+        _endereco: str
+        _contas: list
+    
+    metodos:
+        realizar_transacao(conta: Conta, transacao: Transacao)
+        adicionar_conta(conta: Conta)
+
